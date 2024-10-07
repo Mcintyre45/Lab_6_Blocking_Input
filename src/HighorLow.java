@@ -9,6 +9,7 @@ public class HighorLow {
         int val = generator.nextInt(10) + 1;
         int guess = 0;
         boolean doneGuess = false;
+        String trash = "";
 
         do {
             System.out.print("Guess a number between 1 and 10: ");
@@ -31,7 +32,7 @@ public class HighorLow {
                     doneGuess = true;
                 }
             } else {
-                in.next(); // Consume the invalid input
+                trash = in.nextLine();
                 System.out.println("Invalid input! Please enter a number.");
             }
         } while (!doneGuess);
